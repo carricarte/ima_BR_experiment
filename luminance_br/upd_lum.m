@@ -8,7 +8,8 @@ function upd_lum(dominant, pre_dominant)
 
     global expt;
     
-    if strcmp(dominant, pre_dominant)
+    if strcmp(dominant, pre_dominant) %% This condition will never be met in the first trial because pre_dominant is an empty char array. 
+    %% If a subject respond at the beginning left right left right etc it will never change luminance. Why do you want to have this condition at all?
         % Check if subject chose same side as before
         if strcmp(dominant, 'LeftArrow')
             % Increase lumblue
